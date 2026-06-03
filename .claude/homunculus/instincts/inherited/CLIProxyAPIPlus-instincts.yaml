@@ -1,0 +1,477 @@
+# Instincts generated from https://github.com/wwj-git-rgb/CLIProxyAPIPlus
+# Generated: 2026-06-03T07:33:11.465Z
+# Version: 2.0
+# NOTE: This file supplements (does not replace) any existing curated instincts.
+# High-confidence manually curated instincts should be preserved alongside these.
+
+---
+id: CLIProxyAPIPlus-commit-length
+trigger: "when writing a commit message"
+confidence: 0.6
+domain: git
+source: repo-analysis
+source_repo: https://github.com/wwj-git-rgb/CLIProxyAPIPlus
+---
+
+# CLIProxyAPIPlus Commit Length
+
+## Action
+
+Write moderate-length commit messages (~64 characters)
+
+## Evidence
+
+- Average commit message length: 64 chars
+- Based on 9 commits
+
+---
+id: CLIProxyAPIPlus-naming-files
+trigger: "when creating a new file"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/wwj-git-rgb/CLIProxyAPIPlus
+---
+
+# CLIProxyAPIPlus Naming Files
+
+## Action
+
+Use snake_case naming convention
+
+## Evidence
+
+- Analyzed file naming patterns in repository
+- Dominant pattern: snake_case
+
+---
+id: CLIProxyAPIPlus-import-relative
+trigger: "when importing modules"
+confidence: 0.75
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/wwj-git-rgb/CLIProxyAPIPlus
+---
+
+# CLIProxyAPIPlus Import Relative
+
+## Action
+
+Use relative imports for project files
+
+## Evidence
+
+- Import analysis shows relative import pattern
+- Example: import { x } from '../lib/x'
+
+---
+id: CLIProxyAPIPlus-export-style
+trigger: "when exporting from a module"
+confidence: 0.7
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/wwj-git-rgb/CLIProxyAPIPlus
+---
+
+# CLIProxyAPIPlus Export Style
+
+## Action
+
+Prefer named exports
+
+## Evidence
+
+- Export pattern analysis
+- Dominant style: named
+
+---
+id: CLIProxyAPIPlus-test-separate
+trigger: "when writing tests"
+confidence: 0.8
+domain: testing
+source: repo-analysis
+source_repo: https://github.com/wwj-git-rgb/CLIProxyAPIPlus
+---
+
+# CLIProxyAPIPlus Test Separate
+
+## Action
+
+Place tests in the tests/ or __tests__/ directory, mirroring src structure
+
+## Evidence
+
+- Separate test directory pattern detected
+- Tests live in dedicated test folders
+
+---
+id: CLIProxyAPIPlus-workflow-bugfix-with-test
+trigger: "when doing bugfix with test"
+confidence: 0.65
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/wwj-git-rgb/CLIProxyAPIPlus
+---
+
+# CLIProxyAPIPlus Workflow Bugfix With Test
+
+## Action
+
+Follow the bugfix-with-test workflow:
+1. Identify and fix the bug in the implementation file.
+2. Add or update a test file to cover the fixed behavior or regression.
+3. Commit both the implementation and test changes together.
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~3x per month
+- Files: sdk/api/handlers/openai/openai_responses_websocket.go, sdk/api/handlers/openai/openai_responses_websocket_test.go, internal/runtime/executor/codex_executor.go
+
+---
+id: CLIProxyAPIPlus-workflow-refactor-single-logic-file
+trigger: "when doing refactor single logic file"
+confidence: 0.6
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/wwj-git-rgb/CLIProxyAPIPlus
+---
+
+# CLIProxyAPIPlus Workflow Refactor Single Logic File
+
+## Action
+
+Follow the refactor-single-logic-file workflow:
+1. Identify code that can be refactored or optimized.
+2. Apply refactoring or optimization to the logic file.
+3. Commit the changes to the single file.
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~2x per month
+- Files: sdk/api/handlers/openai/openai_responses_websocket.go, sdk/cliproxy/auth/conductor.go
+
+---
+id: CLIProxyAPIPlus-workflow-feature-implementation-with-multiple-tests
+trigger: "when doing feature implementation with multiple tests"
+confidence: 0.55
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/wwj-git-rgb/CLIProxyAPIPlus
+---
+
+# CLIProxyAPIPlus Workflow Feature Implementation With Multiple Tests
+
+## Action
+
+Follow the feature-implementation-with-multiple-tests workflow:
+1. Implement the new feature in the main logic files.
+2. Update related service or handler files as needed.
+3. Add or update several test files to cover new logic and edge cases.
+4. Commit all related implementation and test changes together.
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~1x per month
+- Files: internal/api/handlers/management/auth_files.go, internal/api/handlers/management/auth_files_delete_test.go, sdk/cliproxy/auth/conductor.go
+
+---
+id: cliproxyapiplus-instinct-file-naming
+trigger: "When creating or renaming a file"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: wwj-git-rgb/CLIProxyAPIPlus
+---
+
+# Cliproxyapiplus Instinct File Naming
+
+## Action
+
+Use snake_case for file names
+
+## Evidence
+
+- Pattern in files: sdk/api/handlers/openai/openai_responses_websocket.go
+- sdk/cliproxy/auth/conductor_overrides_test.go
+
+---
+id: cliproxyapiplus-instinct-function-naming
+trigger: "When defining a function"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: wwj-git-rgb/CLIProxyAPIPlus
+---
+
+# Cliproxyapiplus Instinct Function Naming
+
+## Action
+
+Use camelCase for function names
+
+## Evidence
+
+- Pattern in Go codebase
+- Go language conventions
+
+---
+id: cliproxyapiplus-instinct-class-naming
+trigger: "When defining a struct or class"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: wwj-git-rgb/CLIProxyAPIPlus
+---
+
+# Cliproxyapiplus Instinct Class Naming
+
+## Action
+
+Use PascalCase for class/struct names
+
+## Evidence
+
+- Pattern in Go codebase
+- Go language conventions
+
+---
+id: cliproxyapiplus-instinct-constant-naming
+trigger: "When defining a constant"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: wwj-git-rgb/CLIProxyAPIPlus
+---
+
+# Cliproxyapiplus Instinct Constant Naming
+
+## Action
+
+Use SCREAMING_SNAKE_CASE for constant names
+
+## Evidence
+
+- Pattern in Go codebase
+- Go language conventions
+
+---
+id: cliproxyapiplus-instinct-import-style
+trigger: "When importing modules or packages"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: wwj-git-rgb/CLIProxyAPIPlus
+---
+
+# Cliproxyapiplus Instinct Import Style
+
+## Action
+
+Use relative imports
+
+## Evidence
+
+- Pattern in Go files
+- Go import statements
+
+---
+id: cliproxyapiplus-instinct-export-style
+trigger: "When exporting functions or variables"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: wwj-git-rgb/CLIProxyAPIPlus
+---
+
+# Cliproxyapiplus Instinct Export Style
+
+## Action
+
+Use named exports
+
+## Evidence
+
+- Pattern in Go files
+- Go export conventions
+
+---
+id: cliproxyapiplus-instinct-test-location
+trigger: "When adding or updating tests"
+confidence: 0.9
+domain: testing
+source: repo-analysis
+source_repo: wwj-git-rgb/CLIProxyAPIPlus
+---
+
+# Cliproxyapiplus Instinct Test Location
+
+## Action
+
+Place test files in a separate test location, named with _test.go suffix
+
+## Evidence
+
+- Pattern in files: sdk/api/handlers/openai/openai_responses_websocket_test.go
+- internal/runtime/executor/codex_executor_reasoning_replay_cache_test.go
+
+---
+id: cliproxyapiplus-instinct-test-after-fix
+trigger: "When fixing a bug in a logic file"
+confidence: 0.95
+domain: testing
+source: repo-analysis
+source_repo: wwj-git-rgb/CLIProxyAPIPlus
+---
+
+# Cliproxyapiplus Instinct Test After Fix
+
+## Action
+
+Add or update a corresponding test file to cover the fixed behavior or regression
+
+## Evidence
+
+- Workflow: bugfix-with-test
+- Files: sdk/api/handlers/openai/openai_responses_websocket.go + sdk/api/handlers/openai/openai_responses_websocket_test.go
+
+---
+id: cliproxyapiplus-instinct-test-for-feature
+trigger: "When implementing a new feature or major logic"
+confidence: 0.85
+domain: testing
+source: repo-analysis
+source_repo: wwj-git-rgb/CLIProxyAPIPlus
+---
+
+# Cliproxyapiplus Instinct Test For Feature
+
+## Action
+
+Add or update several test files to cover new logic and edge cases
+
+## Evidence
+
+- Workflow: feature-implementation-with-multiple-tests
+- Files: sdk/cliproxy/auth/conductor_remove_test.go, sdk/cliproxy/auth/persist_policy_test.go
+
+---
+id: cliproxyapiplus-instinct-commit-prefix
+trigger: "When writing a commit message"
+confidence: 0.9
+domain: git
+source: repo-analysis
+source_repo: wwj-git-rgb/CLIProxyAPIPlus
+---
+
+# Cliproxyapiplus Instinct Commit Prefix
+
+## Action
+
+Start the commit message with a type prefix: fix, feat, or refactor, followed by the scope in parentheses
+
+## Evidence
+
+- Pattern in commits: fix(openai): ..., refactor(auth): ..., feat(auth): ...
+
+---
+id: cliproxyapiplus-instinct-commit-length
+trigger: "When composing a commit message"
+confidence: 0.8
+domain: git
+source: repo-analysis
+source_repo: wwj-git-rgb/CLIProxyAPIPlus
+---
+
+# Cliproxyapiplus Instinct Commit Length
+
+## Action
+
+Keep the commit message concise, around 64 characters on average
+
+## Evidence
+
+- Average commit length: 64
+- Pattern in commit examples
+
+---
+id: cliproxyapiplus-instinct-commit-merge
+trigger: "When merging a pull request"
+confidence: 0.8
+domain: git
+source: repo-analysis
+source_repo: wwj-git-rgb/CLIProxyAPIPlus
+---
+
+# Cliproxyapiplus Instinct Commit Merge
+
+## Action
+
+Use 'Merge pull request' format in the commit message
+
+## Evidence
+
+- Pattern in commit: Merge pull request #3688 from sususu98/fix-codex-replay-dev
+
+---
+id: cliproxyapiplus-instinct-bugfix-with-test
+trigger: "When a bug is fixed in a core logic file"
+confidence: 0.95
+domain: workflow
+source: repo-analysis
+source_repo: wwj-git-rgb/CLIProxyAPIPlus
+---
+
+# Cliproxyapiplus Instinct Bugfix With Test
+
+## Action
+
+Add or update a corresponding test file and commit both implementation and test changes together
+
+## Evidence
+
+- Workflow: bugfix-with-test
+- Files: sdk/api/handlers/openai/openai_responses_websocket.go + sdk/api/handlers/openai/openai_responses_websocket_test.go
+
+---
+id: cliproxyapiplus-instinct-refactor-single-logic-file
+trigger: "When refactoring or optimizing a single logic file"
+confidence: 0.9
+domain: workflow
+source: repo-analysis
+source_repo: wwj-git-rgb/CLIProxyAPIPlus
+---
+
+# Cliproxyapiplus Instinct Refactor Single Logic File
+
+## Action
+
+Commit only the changes to the logic file without modifying or adding tests
+
+## Evidence
+
+- Workflow: refactor-single-logic-file
+- Files: sdk/api/handlers/openai/openai_responses_websocket.go
+
+---
+id: cliproxyapiplus-instinct-feature-implementation-with-multiple-tests
+trigger: "When implementing a significant new feature or system capability"
+confidence: 0.85
+domain: workflow
+source: repo-analysis
+source_repo: wwj-git-rgb/CLIProxyAPIPlus
+---
+
+# Cliproxyapiplus Instinct Feature Implementation With Multiple Tests
+
+## Action
+
+Update multiple implementation and test files, and commit all related changes together
+
+## Evidence
+
+- Workflow: feature-implementation-with-multiple-tests
+- Files: internal/api/handlers/management/auth_files.go, sdk/cliproxy/auth/conductor_remove_test.go
+
