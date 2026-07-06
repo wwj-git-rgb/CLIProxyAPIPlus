@@ -1,0 +1,468 @@
+# Instincts generated from https://github.com/wwj-git-rgb/CLIProxyAPIPlus
+# Generated: 2026-07-06T19:33:12.121Z
+# Version: 2.0
+# NOTE: This file supplements (does not replace) any existing curated instincts.
+# High-confidence manually curated instincts should be preserved alongside these.
+
+---
+id: CLIProxyAPIPlus-commit-length
+trigger: "when writing a commit message"
+confidence: 0.6
+domain: git
+source: repo-analysis
+source_repo: https://github.com/wwj-git-rgb/CLIProxyAPIPlus
+---
+
+# CLIProxyAPIPlus Commit Length
+
+## Action
+
+Write moderate-length commit messages (~64 characters)
+
+## Evidence
+
+- Average commit message length: 64 chars
+- Based on 8 commits
+
+---
+id: CLIProxyAPIPlus-naming-files
+trigger: "when creating a new file"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/wwj-git-rgb/CLIProxyAPIPlus
+---
+
+# CLIProxyAPIPlus Naming Files
+
+## Action
+
+Use snake_case naming convention
+
+## Evidence
+
+- Analyzed file naming patterns in repository
+- Dominant pattern: snake_case
+
+---
+id: CLIProxyAPIPlus-import-relative
+trigger: "when importing modules"
+confidence: 0.75
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/wwj-git-rgb/CLIProxyAPIPlus
+---
+
+# CLIProxyAPIPlus Import Relative
+
+## Action
+
+Use relative imports for project files
+
+## Evidence
+
+- Import analysis shows relative import pattern
+- Example: import { x } from '../lib/x'
+
+---
+id: CLIProxyAPIPlus-export-style
+trigger: "when exporting from a module"
+confidence: 0.7
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/wwj-git-rgb/CLIProxyAPIPlus
+---
+
+# CLIProxyAPIPlus Export Style
+
+## Action
+
+Prefer named exports
+
+## Evidence
+
+- Export pattern analysis
+- Dominant style: named
+
+---
+id: CLIProxyAPIPlus-test-separate
+trigger: "when writing tests"
+confidence: 0.8
+domain: testing
+source: repo-analysis
+source_repo: https://github.com/wwj-git-rgb/CLIProxyAPIPlus
+---
+
+# CLIProxyAPIPlus Test Separate
+
+## Action
+
+Place tests in the tests/ or __tests__/ directory, mirroring src structure
+
+## Evidence
+
+- Separate test directory pattern detected
+- Tests live in dedicated test folders
+
+---
+id: CLIProxyAPIPlus-workflow-feature-implementation-with-tests
+trigger: "when doing feature implementation with tests"
+confidence: 0.6
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/wwj-git-rgb/CLIProxyAPIPlus
+---
+
+# CLIProxyAPIPlus Workflow Feature Implementation With Tests
+
+## Action
+
+Follow the feature-implementation-with-tests workflow:
+1. Implement new logic in relevant source files.
+2. Update or add new test files to cover the new logic.
+3. Modify configuration or constants if needed.
+4. Update related integration points (e.g., API handlers, executors).
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~2x per month
+- Files: internal/api/server.go, internal/api/server_test.go, internal/config/config.go
+
+---
+id: CLIProxyAPIPlus-workflow-config-or-auth-behavior-change
+trigger: "when doing config or auth behavior change"
+confidence: 0.6
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/wwj-git-rgb/CLIProxyAPIPlus
+---
+
+# CLIProxyAPIPlus Workflow Config Or Auth Behavior Change
+
+## Action
+
+Follow the config-or-auth-behavior-change workflow:
+1. Modify configuration or authentication logic in implementation files.
+2. Update or add corresponding test files.
+3. Update documentation or comments if necessary.
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~2x per month
+- Files: internal/config/config.go, internal/config/parse.go, sdk/cliproxy/auth/conductor.go
+
+---
+id: CLIProxyAPIPlus-workflow-merge-feature-or-fix-pr
+trigger: "when doing merge feature or fix pr"
+confidence: 0.6
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/wwj-git-rgb/CLIProxyAPIPlus
+---
+
+# CLIProxyAPIPlus Workflow Merge Feature Or Fix Pr
+
+## Action
+
+Follow the merge-feature-or-fix-pr workflow:
+1. Merge pull request.
+2. Duplicate all file changes from the feature/fix branch.
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~2x per month
+- Files: varies (matches files from the original feature/fix commit)
+
+---
+id: cliproxyapiplus-instinct-file-naming
+trigger: "When creating or renaming a file"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: wwj-git-rgb/CLIProxyAPIPlus
+---
+
+# Cliproxyapiplus Instinct File Naming
+
+## Action
+
+Use snake_case for file names
+
+## Evidence
+
+- Pattern in files: internal/api/server.go, internal/config/config.go
+
+---
+id: cliproxyapiplus-instinct-function-naming
+trigger: "When defining a new function"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: wwj-git-rgb/CLIProxyAPIPlus
+---
+
+# Cliproxyapiplus Instinct Function Naming
+
+## Action
+
+Use camelCase for function names
+
+## Evidence
+
+- Pattern in Go codebase, e.g., LoadConfigOptional, ParseConfigBytes
+
+---
+id: cliproxyapiplus-instinct-class-naming
+trigger: "When defining a new struct or type"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: wwj-git-rgb/CLIProxyAPIPlus
+---
+
+# Cliproxyapiplus Instinct Class Naming
+
+## Action
+
+Use PascalCase for struct/type names
+
+## Evidence
+
+- Pattern in Go codebase, e.g., WebsocketAuth
+
+---
+id: cliproxyapiplus-instinct-constant-naming
+trigger: "When defining a constant"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: wwj-git-rgb/CLIProxyAPIPlus
+---
+
+# Cliproxyapiplus Instinct Constant Naming
+
+## Action
+
+Use SCREAMING_SNAKE_CASE for constant names
+
+## Evidence
+
+- Pattern in Go codebase
+
+---
+id: cliproxyapiplus-instinct-import-style
+trigger: "When importing modules/packages"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: wwj-git-rgb/CLIProxyAPIPlus
+---
+
+# Cliproxyapiplus Instinct Import Style
+
+## Action
+
+Use relative imports
+
+## Evidence
+
+- Pattern in Go codebase
+
+---
+id: cliproxyapiplus-instinct-export-style
+trigger: "When exporting functions or types"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: wwj-git-rgb/CLIProxyAPIPlus
+---
+
+# Cliproxyapiplus Instinct Export Style
+
+## Action
+
+Use named exports
+
+## Evidence
+
+- Pattern in Go codebase
+
+---
+id: cliproxyapiplus-instinct-test-location
+trigger: "When adding or updating tests"
+confidence: 0.9
+domain: testing
+source: repo-analysis
+source_repo: wwj-git-rgb/CLIProxyAPIPlus
+---
+
+# Cliproxyapiplus Instinct Test Location
+
+## Action
+
+Place test files in a separate test file (e.g., *_test.go) alongside the implementation
+
+## Evidence
+
+- Pattern in files: internal/api/server_test.go, sdk/cliproxy/auth/cooldown_backoff_test.go
+
+---
+id: cliproxyapiplus-instinct-test-update-with-feature
+trigger: "When implementing new logic or features"
+confidence: 0.9
+domain: testing
+source: repo-analysis
+source_repo: wwj-git-rgb/CLIProxyAPIPlus
+---
+
+# Cliproxyapiplus Instinct Test Update With Feature
+
+## Action
+
+Update or add corresponding test files to cover the new logic
+
+## Evidence
+
+- Workflow: feature-implementation-with-tests
+- Commits updating both server.go and server_test.go
+
+---
+id: cliproxyapiplus-instinct-test-update-with-config-auth-change
+trigger: "When modifying configuration or authentication logic"
+confidence: 0.85
+domain: testing
+source: repo-analysis
+source_repo: wwj-git-rgb/CLIProxyAPIPlus
+---
+
+# Cliproxyapiplus Instinct Test Update With Config Auth Change
+
+## Action
+
+Update or add corresponding test files
+
+## Evidence
+
+- Workflow: config-or-auth-behavior-change
+- Commits updating config.go and cooldown_backoff_test.go
+
+---
+id: cliproxyapiplus-instinct-commit-prefix
+trigger: "When writing a commit message for a fix or feature"
+confidence: 0.9
+domain: git
+source: repo-analysis
+source_repo: wwj-git-rgb/CLIProxyAPIPlus
+---
+
+# Cliproxyapiplus Instinct Commit Prefix
+
+## Action
+
+Prefix commit message with 'fix:' for bug fixes or 'feat:' for new features
+
+## Evidence
+
+- Seen in commits: 'fix: allow management access...', 'feat(config): default enable WebsocketAuth...'
+
+---
+id: cliproxyapiplus-instinct-commit-length
+trigger: "When writing a commit message"
+confidence: 0.8
+domain: git
+source: repo-analysis
+source_repo: wwj-git-rgb/CLIProxyAPIPlus
+---
+
+# Cliproxyapiplus Instinct Commit Length
+
+## Action
+
+Keep commit messages concise (average ~64 characters)
+
+## Evidence
+
+- Average commit message length: 64
+
+---
+id: cliproxyapiplus-instinct-merge-pr-format
+trigger: "When merging a pull request"
+confidence: 0.9
+domain: git
+source: repo-analysis
+source_repo: wwj-git-rgb/CLIProxyAPIPlus
+---
+
+# Cliproxyapiplus Instinct Merge Pr Format
+
+## Action
+
+Use 'Merge pull request' in the commit message
+
+## Evidence
+
+- Seen in commits: 'Merge pull request #4107...', 'Merge pull request #4109...'
+
+---
+id: cliproxyapiplus-instinct-feature-implementation
+trigger: "When someone wants to add a new feature or significant capability"
+confidence: 0.9
+domain: workflow
+source: repo-analysis
+source_repo: wwj-git-rgb/CLIProxyAPIPlus
+---
+
+# Cliproxyapiplus Instinct Feature Implementation
+
+## Action
+
+Implement new logic, update/add tests, modify config/constants if needed, update integration points
+
+## Evidence
+
+- Workflow: feature-implementation-with-tests
+- Commits and files: internal/api/server.go, internal/api/server_test.go
+
+---
+id: cliproxyapiplus-instinct-config-auth-change
+trigger: "When someone wants to adjust configuration defaults or authentication logic"
+confidence: 0.85
+domain: workflow
+source: repo-analysis
+source_repo: wwj-git-rgb/CLIProxyAPIPlus
+---
+
+# Cliproxyapiplus Instinct Config Auth Change
+
+## Action
+
+Modify config/auth logic, update/add tests, update docs/comments if necessary
+
+## Evidence
+
+- Workflow: config-or-auth-behavior-change
+- Commits and files: internal/config/config.go, sdk/cliproxy/auth/conductor.go
+
+---
+id: cliproxyapiplus-instinct-merge-feature-fix-pr
+trigger: "When someone merges a feature or fix branch into main"
+confidence: 0.9
+domain: workflow
+source: repo-analysis
+source_repo: wwj-git-rgb/CLIProxyAPIPlus
+---
+
+# Cliproxyapiplus Instinct Merge Feature Fix Pr
+
+## Action
+
+Merge pull request and duplicate all file changes from the feature/fix branch
+
+## Evidence
+
+- Workflow: merge-feature-or-fix-pr
+- Commits: 'Merge pull request #4107...'
+
