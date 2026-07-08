@@ -1,0 +1,455 @@
+# Instincts generated from https://github.com/wwj-git-rgb/CLIProxyAPIPlus
+# Generated: 2026-07-08T01:33:01.399Z
+# Version: 2.0
+# NOTE: This file supplements (does not replace) any existing curated instincts.
+# High-confidence manually curated instincts should be preserved alongside these.
+
+---
+id: CLIProxyAPIPlus-commit-conventional
+trigger: "when writing a commit message"
+confidence: 0.85
+domain: git
+source: repo-analysis
+source_repo: https://github.com/wwj-git-rgb/CLIProxyAPIPlus
+---
+
+# CLIProxyAPIPlus Commit Conventional
+
+## Action
+
+Use conventional commit format with prefixes: fix, feat, refactor, test
+
+## Evidence
+
+- 7 commits analyzed
+- Detected conventional commit pattern
+- Examples: fix(auth): handle `invalid_grant` errors with retry suspension logic, test(executor): add unit test to validate complete SSE event passthrough in Claude executor
+
+---
+id: CLIProxyAPIPlus-commit-length
+trigger: "when writing a commit message"
+confidence: 0.6
+domain: git
+source: repo-analysis
+source_repo: https://github.com/wwj-git-rgb/CLIProxyAPIPlus
+---
+
+# CLIProxyAPIPlus Commit Length
+
+## Action
+
+Write moderate-length commit messages (~82 characters)
+
+## Evidence
+
+- Average commit message length: 82 chars
+- Based on 7 commits
+
+---
+id: CLIProxyAPIPlus-naming-files
+trigger: "when creating a new file"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/wwj-git-rgb/CLIProxyAPIPlus
+---
+
+# CLIProxyAPIPlus Naming Files
+
+## Action
+
+Use snake_case naming convention
+
+## Evidence
+
+- Analyzed file naming patterns in repository
+- Dominant pattern: snake_case
+
+---
+id: CLIProxyAPIPlus-import-relative
+trigger: "when importing modules"
+confidence: 0.75
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/wwj-git-rgb/CLIProxyAPIPlus
+---
+
+# CLIProxyAPIPlus Import Relative
+
+## Action
+
+Use relative imports for project files
+
+## Evidence
+
+- Import analysis shows relative import pattern
+- Example: import { x } from '../lib/x'
+
+---
+id: CLIProxyAPIPlus-export-style
+trigger: "when exporting from a module"
+confidence: 0.7
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/wwj-git-rgb/CLIProxyAPIPlus
+---
+
+# CLIProxyAPIPlus Export Style
+
+## Action
+
+Prefer named exports
+
+## Evidence
+
+- Export pattern analysis
+- Dominant style: named
+
+---
+id: CLIProxyAPIPlus-test-separate
+trigger: "when writing tests"
+confidence: 0.8
+domain: testing
+source: repo-analysis
+source_repo: https://github.com/wwj-git-rgb/CLIProxyAPIPlus
+---
+
+# CLIProxyAPIPlus Test Separate
+
+## Action
+
+Place tests in the tests/ or __tests__/ directory, mirroring src structure
+
+## Evidence
+
+- Separate test directory pattern detected
+- Tests live in dedicated test folders
+
+---
+id: CLIProxyAPIPlus-workflow-feature-or-bugfix-implementation-with-unit-tests
+trigger: "when doing feature or bugfix implementation with unit tests"
+confidence: 0.7
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/wwj-git-rgb/CLIProxyAPIPlus
+---
+
+# CLIProxyAPIPlus Workflow Feature Or Bugfix Implementation With Unit Tests
+
+## Action
+
+Follow the feature-or-bugfix-implementation-with-unit-tests workflow:
+1. Modify or add Go implementation file (e.g., executor, conductor, response handler).
+2. Create or update the corresponding _test.go file with unit tests covering the new or changed logic.
+3. Commit both the implementation and test file together.
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~4x per month
+- Files: sdk/cliproxy/auth/conductor.go, sdk/cliproxy/auth/conductor_overrides_test.go, internal/runtime/executor/claude_executor.go
+
+---
+id: CLIProxyAPIPlus-workflow-multi-file-refactor-or-enhancement-with-tests
+trigger: "when doing multi file refactor or enhancement with tests"
+confidence: 0.6
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/wwj-git-rgb/CLIProxyAPIPlus
+---
+
+# CLIProxyAPIPlus Workflow Multi File Refactor Or Enhancement With Tests
+
+## Action
+
+Follow the multi-file-refactor-or-enhancement-with-tests workflow:
+1. Modify multiple related Go implementation files (e.g., executors, helpers, translators).
+2. Update or create associated test files (_test.go) for each changed implementation file.
+3. Ensure changes maintain or improve compatibility and add/adjust tests as needed.
+4. Commit all related files together.
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~2x per month
+- Files: internal/runtime/executor/codex_openai_images.go, internal/runtime/executor/helps/usage_helpers.go, internal/runtime/executor/helps/usage_helpers_test.go
+
+---
+id: cliproxyapiplus-instinct-file-naming
+trigger: "When creating or renaming a file"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: wwj-git-rgb/CLIProxyAPIPlus
+---
+
+# Cliproxyapiplus Instinct File Naming
+
+## Action
+
+Use snake_case for file names (e.g., my_file.go)
+
+## Evidence
+
+- Pattern in files: internal/runtime/executor/claude_executor.go
+- internal/translator/antigravity/openai/chat-completions/antigravity_openai_request.go
+
+---
+id: cliproxyapiplus-instinct-function-naming
+trigger: "When defining a function"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: wwj-git-rgb/CLIProxyAPIPlus
+---
+
+# Cliproxyapiplus Instinct Function Naming
+
+## Action
+
+Use camelCase for function names (e.g., handleRequest)
+
+## Evidence
+
+- Pattern in Go codebase
+- Go language convention
+
+---
+id: cliproxyapiplus-instinct-class-naming
+trigger: "When defining a struct or class"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: wwj-git-rgb/CLIProxyAPIPlus
+---
+
+# Cliproxyapiplus Instinct Class Naming
+
+## Action
+
+Use PascalCase for struct or class names (e.g., AuthConductor)
+
+## Evidence
+
+- Pattern in Go codebase
+- Go language convention
+
+---
+id: cliproxyapiplus-instinct-constant-naming
+trigger: "When declaring a constant"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: wwj-git-rgb/CLIProxyAPIPlus
+---
+
+# Cliproxyapiplus Instinct Constant Naming
+
+## Action
+
+Use SCREAMING_SNAKE_CASE for constant names (e.g., MAX_RETRIES)
+
+## Evidence
+
+- Pattern in Go codebase
+- Go language convention
+
+---
+id: cliproxyapiplus-instinct-import-style
+trigger: "When importing modules"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: wwj-git-rgb/CLIProxyAPIPlus
+---
+
+# Cliproxyapiplus Instinct Import Style
+
+## Action
+
+Use relative imports for internal packages
+
+## Evidence
+
+- Pattern in Go source files
+- Go language convention
+
+---
+id: cliproxyapiplus-instinct-export-style
+trigger: "When exporting functions or types"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: wwj-git-rgb/CLIProxyAPIPlus
+---
+
+# Cliproxyapiplus Instinct Export Style
+
+## Action
+
+Use named exports (export only what is needed, avoid default exports)
+
+## Evidence
+
+- Pattern in Go source files
+- Go language convention
+
+---
+id: cliproxyapiplus-instinct-test-file-location
+trigger: "When writing tests for a Go implementation file"
+confidence: 0.9
+domain: testing
+source: repo-analysis
+source_repo: wwj-git-rgb/CLIProxyAPIPlus
+---
+
+# Cliproxyapiplus Instinct Test File Location
+
+## Action
+
+Place the test file in the same directory as the implementation file with _test.go suffix
+
+## Evidence
+
+- Pattern in files: internal/runtime/executor/claude_executor.go and internal/runtime/executor/claude_executor_test.go
+
+---
+id: cliproxyapiplus-instinct-unit-test-coverage
+trigger: "When adding or modifying logic in a Go file"
+confidence: 0.9
+domain: testing
+source: repo-analysis
+source_repo: wwj-git-rgb/CLIProxyAPIPlus
+---
+
+# Cliproxyapiplus Instinct Unit Test Coverage
+
+## Action
+
+Add or update the corresponding _test.go file to cover the new or changed logic
+
+## Evidence
+
+- Workflow: feature-or-bugfix-implementation-with-unit-tests
+- Pattern in commit sequences
+
+---
+id: cliproxyapiplus-instinct-test-commit-together
+trigger: "When committing a new feature, bugfix, or refactor"
+confidence: 0.9
+domain: testing
+source: repo-analysis
+source_repo: wwj-git-rgb/CLIProxyAPIPlus
+---
+
+# Cliproxyapiplus Instinct Test Commit Together
+
+## Action
+
+Commit implementation and corresponding test files together
+
+## Evidence
+
+- Workflow: feature-or-bugfix-implementation-with-unit-tests
+- Workflow: multi-file-refactor-or-enhancement-with-tests
+
+---
+id: cliproxyapiplus-instinct-conventional-commits
+trigger: "When writing a commit message"
+confidence: 0.9
+domain: git
+source: repo-analysis
+source_repo: wwj-git-rgb/CLIProxyAPIPlus
+---
+
+# Cliproxyapiplus Instinct Conventional Commits
+
+## Action
+
+Use conventional commit format: <type>(<scope>): <description>
+
+## Evidence
+
+- Pattern in commits: fix(auth): handle `invalid_grant` errors...
+- feat(translator): enhance Claude tool response...
+
+---
+id: cliproxyapiplus-instinct-commit-prefixes
+trigger: "When choosing a commit type"
+confidence: 0.8
+domain: git
+source: repo-analysis
+source_repo: wwj-git-rgb/CLIProxyAPIPlus
+---
+
+# Cliproxyapiplus Instinct Commit Prefixes
+
+## Action
+
+Use one of: fix, feat, refactor, test as the commit prefix
+
+## Evidence
+
+- Pattern in commit prefixes
+- Examples in commit history
+
+---
+id: cliproxyapiplus-instinct-commit-length
+trigger: "When writing a commit message"
+confidence: 0.7
+domain: git
+source: repo-analysis
+source_repo: wwj-git-rgb/CLIProxyAPIPlus
+---
+
+# Cliproxyapiplus Instinct Commit Length
+
+## Action
+
+Aim for a concise summary (~82 characters on average)
+
+## Evidence
+
+- Average commit length: 82
+- Pattern in commit examples
+
+---
+id: cliproxyapiplus-instinct-workflow-feature-bugfix
+trigger: "When implementing a new feature or bugfix"
+confidence: 0.95
+domain: workflow
+source: repo-analysis
+source_repo: wwj-git-rgb/CLIProxyAPIPlus
+---
+
+# Cliproxyapiplus Instinct Workflow Feature Bugfix
+
+## Action
+
+Modify/add Go implementation file and corresponding _test.go file, then commit both together
+
+## Evidence
+
+- Workflow: feature-or-bugfix-implementation-with-unit-tests
+- Files: sdk/cliproxy/auth/conductor.go + conductor_overrides_test.go
+
+---
+id: cliproxyapiplus-instinct-workflow-multifile-refactor
+trigger: "When refactoring or enhancing a subsystem"
+confidence: 0.9
+domain: workflow
+source: repo-analysis
+source_repo: wwj-git-rgb/CLIProxyAPIPlus
+---
+
+# Cliproxyapiplus Instinct Workflow Multifile Refactor
+
+## Action
+
+Update multiple related Go files and their tests, ensuring compatibility, and commit all together
+
+## Evidence
+
+- Workflow: multi-file-refactor-or-enhancement-with-tests
+- Files: internal/runtime/executor/codex_openai_images.go + related test files
+
