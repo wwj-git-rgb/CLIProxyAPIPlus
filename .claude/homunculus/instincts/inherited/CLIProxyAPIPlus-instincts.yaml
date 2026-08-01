@@ -1,0 +1,481 @@
+# Instincts generated from https://github.com/wwj-git-rgb/CLIProxyAPIPlus
+# Generated: 2026-08-01T07:32:53.452Z
+# Version: 2.0
+# NOTE: This file supplements (does not replace) any existing curated instincts.
+# High-confidence manually curated instincts should be preserved alongside these.
+
+---
+id: CLIProxyAPIPlus-commit-conventional
+trigger: "when writing a commit message"
+confidence: 0.85
+domain: git
+source: repo-analysis
+source_repo: https://github.com/wwj-git-rgb/CLIProxyAPIPlus
+---
+
+# CLIProxyAPIPlus Commit Conventional
+
+## Action
+
+Use conventional commit format with prefixes: feat, fix
+
+## Evidence
+
+- 7 commits analyzed
+- Detected conventional commit pattern
+- Examples: feat(executor): introduce Kimi Thinking Replay cache and continuity mechanisms, fix(codex): align websocket cloaking headers
+
+---
+id: CLIProxyAPIPlus-commit-length
+trigger: "when writing a commit message"
+confidence: 0.6
+domain: git
+source: repo-analysis
+source_repo: https://github.com/wwj-git-rgb/CLIProxyAPIPlus
+---
+
+# CLIProxyAPIPlus Commit Length
+
+## Action
+
+Write moderate-length commit messages (~69 characters)
+
+## Evidence
+
+- Average commit message length: 69 chars
+- Based on 7 commits
+
+---
+id: CLIProxyAPIPlus-naming-files
+trigger: "when creating a new file"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/wwj-git-rgb/CLIProxyAPIPlus
+---
+
+# CLIProxyAPIPlus Naming Files
+
+## Action
+
+Use snake_case naming convention
+
+## Evidence
+
+- Analyzed file naming patterns in repository
+- Dominant pattern: snake_case
+
+---
+id: CLIProxyAPIPlus-import-relative
+trigger: "when importing modules"
+confidence: 0.75
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/wwj-git-rgb/CLIProxyAPIPlus
+---
+
+# CLIProxyAPIPlus Import Relative
+
+## Action
+
+Use relative imports for project files
+
+## Evidence
+
+- Import analysis shows relative import pattern
+- Example: import { x } from '../lib/x'
+
+---
+id: CLIProxyAPIPlus-export-style
+trigger: "when exporting from a module"
+confidence: 0.7
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/wwj-git-rgb/CLIProxyAPIPlus
+---
+
+# CLIProxyAPIPlus Export Style
+
+## Action
+
+Prefer named exports
+
+## Evidence
+
+- Export pattern analysis
+- Dominant style: named
+
+---
+id: CLIProxyAPIPlus-test-separate
+trigger: "when writing tests"
+confidence: 0.8
+domain: testing
+source: repo-analysis
+source_repo: https://github.com/wwj-git-rgb/CLIProxyAPIPlus
+---
+
+# CLIProxyAPIPlus Test Separate
+
+## Action
+
+Place tests in the tests/ or __tests__/ directory, mirroring src structure
+
+## Evidence
+
+- Separate test directory pattern detected
+- Tests live in dedicated test folders
+
+---
+id: CLIProxyAPIPlus-workflow-feature-development
+trigger: "when implementing a new feature"
+confidence: 0.9
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/wwj-git-rgb/CLIProxyAPIPlus
+---
+
+# CLIProxyAPIPlus Workflow Feature Development
+
+## Action
+
+Follow the feature-development workflow:
+1. Add feature implementation
+2. Add tests for feature
+3. Update documentation
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~21x per month
+- Files: **/*.test.*, **/api/**
+
+---
+id: CLIProxyAPIPlus-workflow-add-or-enhance-api-feature-with-tests
+trigger: "when doing add or enhance api feature with tests"
+confidence: 0.65
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/wwj-git-rgb/CLIProxyAPIPlus
+---
+
+# CLIProxyAPIPlus Workflow Add Or Enhance Api Feature With Tests
+
+## Action
+
+Follow the add-or-enhance-api-feature-with-tests workflow:
+1. Implement new logic or feature in the relevant executor/handler/translator file(s)
+2. Create or update corresponding test files to cover the new logic
+3. If needed, add helper methods or supporting files
+4. Update documentation or configuration examples if the feature is user-facing
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~3x per month
+- Files: internal/runtime/executor/*_executor*.go, internal/runtime/executor/*_test.go, internal/api/handlers/management/*.go
+
+---
+id: CLIProxyAPIPlus-workflow-add-or-update-configurable-option-with-docs-and-tests
+trigger: "when doing add or update configurable option with docs and tests"
+confidence: 0.6
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/wwj-git-rgb/CLIProxyAPIPlus
+---
+
+# CLIProxyAPIPlus Workflow Add Or Update Configurable Option With Docs And Tests
+
+## Action
+
+Follow the add-or-update-configurable-option-with-docs-and-tests workflow:
+1. Add or update the configuration option in config_types.go
+2. Update config.example.yaml to document the new/changed option
+3. Modify internal logic to use the new/updated configuration option
+4. Update or add tests to verify the configuration's effect
+5. Update documentation if needed
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~2x per month
+- Files: config.example.yaml, internal/config/config_types.go, internal/api/handlers/management/*.go
+
+---
+id: CLIProxyAPIPlus-workflow-fix-bug-in-executor-or-api-handler-with-test
+trigger: "when doing fix bug in executor or api handler with test"
+confidence: 0.6
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/wwj-git-rgb/CLIProxyAPIPlus
+---
+
+# CLIProxyAPIPlus Workflow Fix Bug In Executor Or Api Handler With Test
+
+## Action
+
+Follow the fix-bug-in-executor-or-api-handler-with-test workflow:
+1. Identify and fix the bug in the relevant executor or handler file
+2. Update or add a test to reproduce and verify the fix
+3. If applicable, update configuration or documentation to clarify the fix
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~2x per month
+- Files: internal/runtime/executor/*.go, internal/runtime/executor/*_test.go, internal/api/handlers/management/*.go
+
+---
+id: cliproxyapiplus-instinct-file-naming
+trigger: "When creating or renaming a file"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: wwj-git-rgb/CLIProxyAPIPlus
+---
+
+# Cliproxyapiplus Instinct File Naming
+
+## Action
+
+Use snake_case for file names
+
+## Evidence
+
+- Pattern in files: internal/cache/kimi_thinking_replay_cache.go
+- internal/cache/signature_cache.go
+
+---
+id: cliproxyapiplus-instinct-function-naming
+trigger: "When defining a function"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: wwj-git-rgb/CLIProxyAPIPlus
+---
+
+# Cliproxyapiplus Instinct Function Naming
+
+## Action
+
+Use camelCase for function names
+
+## Evidence
+
+- Pattern in Go codebase
+- Naming conventions section
+
+---
+id: cliproxyapiplus-instinct-class-naming
+trigger: "When defining a struct or class"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: wwj-git-rgb/CLIProxyAPIPlus
+---
+
+# Cliproxyapiplus Instinct Class Naming
+
+## Action
+
+Use PascalCase for struct or class names
+
+## Evidence
+
+- Naming conventions section
+
+---
+id: cliproxyapiplus-instinct-constant-naming
+trigger: "When defining a constant"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: wwj-git-rgb/CLIProxyAPIPlus
+---
+
+# Cliproxyapiplus Instinct Constant Naming
+
+## Action
+
+Use SCREAMING_SNAKE_CASE for constant names
+
+## Evidence
+
+- Naming conventions section
+
+---
+id: cliproxyapiplus-instinct-import-style
+trigger: "When importing modules"
+confidence: 0.85
+domain: code-style
+source: repo-analysis
+source_repo: wwj-git-rgb/CLIProxyAPIPlus
+---
+
+# Cliproxyapiplus Instinct Import Style
+
+## Action
+
+Use relative import paths
+
+## Evidence
+
+- importStyle: relative
+
+---
+id: cliproxyapiplus-instinct-export-style
+trigger: "When exporting functions or types"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: wwj-git-rgb/CLIProxyAPIPlus
+---
+
+# Cliproxyapiplus Instinct Export Style
+
+## Action
+
+Use named exports
+
+## Evidence
+
+- exportStyle: named
+
+---
+id: cliproxyapiplus-instinct-test-location
+trigger: "When writing tests"
+confidence: 0.85
+domain: testing
+source: repo-analysis
+source_repo: wwj-git-rgb/CLIProxyAPIPlus
+---
+
+# Cliproxyapiplus Instinct Test Location
+
+## Action
+
+Place test files in a separate test location, typically alongside the implementation with _test.go suffix
+
+## Evidence
+
+- testLocation: separate
+- Pattern in files: internal/cache/kimi_thinking_replay_cache_test.go
+
+---
+id: cliproxyapiplus-instinct-test-pattern
+trigger: "When adding or updating a feature or fixing a bug"
+confidence: 0.9
+domain: testing
+source: repo-analysis
+source_repo: wwj-git-rgb/CLIProxyAPIPlus
+---
+
+# Cliproxyapiplus Instinct Test Pattern
+
+## Action
+
+Create or update corresponding _test.go files to cover the new or changed logic
+
+## Evidence
+
+- Workflow commit sequences
+- Pattern in files: internal/runtime/executor/*_test.go
+
+---
+id: cliproxyapiplus-instinct-commit-format
+trigger: "When making a commit"
+confidence: 0.9
+domain: git
+source: repo-analysis
+source_repo: wwj-git-rgb/CLIProxyAPIPlus
+---
+
+# Cliproxyapiplus Instinct Commit Format
+
+## Action
+
+Use conventional commit prefixes (feat, fix) and scope in parentheses, followed by a concise description
+
+## Evidence
+
+- feat(executor): introduce Kimi Thinking Replay cache and continuity mechanisms
+- fix(codex): align websocket cloaking headers
+
+---
+id: cliproxyapiplus-instinct-commit-length
+trigger: "When writing a commit message"
+confidence: 0.7
+domain: git
+source: repo-analysis
+source_repo: wwj-git-rgb/CLIProxyAPIPlus
+---
+
+# Cliproxyapiplus Instinct Commit Length
+
+## Action
+
+Keep the commit message length around 69 characters on average
+
+## Evidence
+
+- averageLength: 69
+
+---
+id: cliproxyapiplus-instinct-feature-workflow
+trigger: "When adding or enhancing an executor, API handler, or translator feature"
+confidence: 0.95
+domain: workflow
+source: repo-analysis
+source_repo: wwj-git-rgb/CLIProxyAPIPlus
+---
+
+# Cliproxyapiplus Instinct Feature Workflow
+
+## Action
+
+Implement the feature, add/update tests, add helpers if needed, and update documentation/config examples if user-facing
+
+## Evidence
+
+- Workflow: add-or-enhance-api-feature-with-tests
+- Example commits and files
+
+---
+id: cliproxyapiplus-instinct-config-option-workflow
+trigger: "When adding or updating a configuration option"
+confidence: 0.92
+domain: workflow
+source: repo-analysis
+source_repo: wwj-git-rgb/CLIProxyAPIPlus
+---
+
+# Cliproxyapiplus Instinct Config Option Workflow
+
+## Action
+
+Update config_types.go, config.example.yaml, internal logic, tests, and documentation as needed
+
+## Evidence
+
+- Workflow: add-or-update-configurable-option-with-docs-and-tests
+- Example commits and files
+
+---
+id: cliproxyapiplus-instinct-bugfix-workflow
+trigger: "When fixing a bug in executor or API handler logic"
+confidence: 0.88
+domain: workflow
+source: repo-analysis
+source_repo: wwj-git-rgb/CLIProxyAPIPlus
+---
+
+# Cliproxyapiplus Instinct Bugfix Workflow
+
+## Action
+
+Fix the bug, add or update a test to verify, and update configuration or documentation if applicable
+
+## Evidence
+
+- Workflow: fix-bug-in-executor-or-api-handler-with-test
+- Example commits and files
+
