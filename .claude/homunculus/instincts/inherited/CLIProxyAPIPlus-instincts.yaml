@@ -1,0 +1,449 @@
+# Instincts generated from https://github.com/wwj-git-rgb/CLIProxyAPIPlus
+# Generated: 2026-08-03T01:33:03.037Z
+# Version: 2.0
+# NOTE: This file supplements (does not replace) any existing curated instincts.
+# High-confidence manually curated instincts should be preserved alongside these.
+
+---
+id: CLIProxyAPIPlus-commit-length
+trigger: "when writing a commit message"
+confidence: 0.6
+domain: git
+source: repo-analysis
+source_repo: https://github.com/wwj-git-rgb/CLIProxyAPIPlus
+---
+
+# CLIProxyAPIPlus Commit Length
+
+## Action
+
+Write moderate-length commit messages (~83 characters)
+
+## Evidence
+
+- Average commit message length: 83 chars
+- Based on 10 commits
+
+---
+id: CLIProxyAPIPlus-naming-files
+trigger: "when creating a new file"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/wwj-git-rgb/CLIProxyAPIPlus
+---
+
+# CLIProxyAPIPlus Naming Files
+
+## Action
+
+Use snake_case naming convention
+
+## Evidence
+
+- Analyzed file naming patterns in repository
+- Dominant pattern: snake_case
+
+---
+id: CLIProxyAPIPlus-import-relative
+trigger: "when importing modules"
+confidence: 0.75
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/wwj-git-rgb/CLIProxyAPIPlus
+---
+
+# CLIProxyAPIPlus Import Relative
+
+## Action
+
+Use relative imports for project files
+
+## Evidence
+
+- Import analysis shows relative import pattern
+- Example: import { x } from '../lib/x'
+
+---
+id: CLIProxyAPIPlus-export-style
+trigger: "when exporting from a module"
+confidence: 0.7
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/wwj-git-rgb/CLIProxyAPIPlus
+---
+
+# CLIProxyAPIPlus Export Style
+
+## Action
+
+Prefer named exports
+
+## Evidence
+
+- Export pattern analysis
+- Dominant style: named
+
+---
+id: CLIProxyAPIPlus-test-separate
+trigger: "when writing tests"
+confidence: 0.8
+domain: testing
+source: repo-analysis
+source_repo: https://github.com/wwj-git-rgb/CLIProxyAPIPlus
+---
+
+# CLIProxyAPIPlus Test Separate
+
+## Action
+
+Place tests in the tests/ or __tests__/ directory, mirroring src structure
+
+## Evidence
+
+- Separate test directory pattern detected
+- Tests live in dedicated test folders
+
+---
+id: CLIProxyAPIPlus-workflow-feature-or-bugfix-with-implementation-and-tests
+trigger: "when doing feature or bugfix with implementation and tests"
+confidence: 0.8
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/wwj-git-rgb/CLIProxyAPIPlus
+---
+
+# CLIProxyAPIPlus Workflow Feature Or Bugfix With Implementation And Tests
+
+## Action
+
+Follow the feature-or-bugfix-with-implementation-and-tests workflow:
+1. Modify or add implementation file(s) (*.go) in a specific module directory.
+2. Modify or add corresponding test file(s) (*.go) in the same directory, typically with _test.go suffix.
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~6x per month
+- Files: internal/runtime/executor/helps/*.go, internal/runtime/executor/helps/*_test.go, internal/runtime/executor/openai_compat_executor.go
+
+---
+id: CLIProxyAPIPlus-workflow-configurable-feature-addition
+trigger: "when doing configurable feature addition"
+confidence: 0.6
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/wwj-git-rgb/CLIProxyAPIPlus
+---
+
+# CLIProxyAPIPlus Workflow Configurable Feature Addition
+
+## Action
+
+Follow the configurable-feature-addition workflow:
+1. Modify or add Go implementation files to support the new config option.
+2. Update or add test files to cover the new config behavior.
+3. Update config.example.yaml to document the new option and its usage.
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~2x per month
+- Files: config.example.yaml, internal/client/codex/models/models.go, internal/client/codex/models/models_test.go
+
+---
+id: CLIProxyAPIPlus-workflow-translator-adapter-bugfix
+trigger: "when doing translator adapter bugfix"
+confidence: 0.75
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/wwj-git-rgb/CLIProxyAPIPlus
+---
+
+# CLIProxyAPIPlus Workflow Translator Adapter Bugfix
+
+## Action
+
+Follow the translator-adapter-bugfix workflow:
+1. Modify or add implementation file(s) in the relevant translator adapter directory.
+2. Modify or add the corresponding test file(s) in the same directory.
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~5x per month
+- Files: internal/translator/gemini/interactions/interactions_gemini_common.go, internal/translator/gemini/interactions/interactions_gemini_common_test.go, internal/translator/openai/interactions/responses/interactions_openai_responses_response.go
+
+---
+id: cliproxyapiplus-instinct-naming-files
+trigger: "When creating or renaming a file in the repository"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: wwj-git-rgb/CLIProxyAPIPlus
+---
+
+# Cliproxyapiplus Instinct Naming Files
+
+## Action
+
+Use snake_case for file names
+
+## Evidence
+
+- Pattern in namingConventions.files: snake_case
+
+---
+id: cliproxyapiplus-instinct-naming-functions
+trigger: "When defining a new function"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: wwj-git-rgb/CLIProxyAPIPlus
+---
+
+# Cliproxyapiplus Instinct Naming Functions
+
+## Action
+
+Use camelCase for function names
+
+## Evidence
+
+- Pattern in namingConventions.functions: camelCase
+
+---
+id: cliproxyapiplus-instinct-naming-classes
+trigger: "When defining a new class or struct"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: wwj-git-rgb/CLIProxyAPIPlus
+---
+
+# Cliproxyapiplus Instinct Naming Classes
+
+## Action
+
+Use PascalCase for class/struct names
+
+## Evidence
+
+- Pattern in namingConventions.classes: PascalCase
+
+---
+id: cliproxyapiplus-instinct-naming-constants
+trigger: "When defining a constant"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: wwj-git-rgb/CLIProxyAPIPlus
+---
+
+# Cliproxyapiplus Instinct Naming Constants
+
+## Action
+
+Use SCREAMING_SNAKE_CASE for constant names
+
+## Evidence
+
+- Pattern in namingConventions.constants: SCREAMING_SNAKE_CASE
+
+---
+id: cliproxyapiplus-instinct-import-style
+trigger: "When importing modules in Go files"
+confidence: 0.85
+domain: code-style
+source: repo-analysis
+source_repo: wwj-git-rgb/CLIProxyAPIPlus
+---
+
+# Cliproxyapiplus Instinct Import Style
+
+## Action
+
+Use relative import paths
+
+## Evidence
+
+- Pattern in importStyle: relative
+
+---
+id: cliproxyapiplus-instinct-export-style
+trigger: "When exporting functions or types"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: wwj-git-rgb/CLIProxyAPIPlus
+---
+
+# Cliproxyapiplus Instinct Export Style
+
+## Action
+
+Use named exports
+
+## Evidence
+
+- Pattern in exportStyle: named
+
+---
+id: cliproxyapiplus-instinct-test-pairing
+trigger: "When adding or modifying a Go implementation file (*.go) in a module directory"
+confidence: 0.95
+domain: testing
+source: repo-analysis
+source_repo: wwj-git-rgb/CLIProxyAPIPlus
+---
+
+# Cliproxyapiplus Instinct Test Pairing
+
+## Action
+
+Add or update a corresponding _test.go file in the same directory
+
+## Evidence
+
+- Workflow: feature-or-bugfix-with-implementation-and-tests
+- Pattern in files: *.go and *_test.go pairs
+
+---
+id: cliproxyapiplus-instinct-test-configurable-feature
+trigger: "When adding a new configuration option"
+confidence: 0.9
+domain: testing
+source: repo-analysis
+source_repo: wwj-git-rgb/CLIProxyAPIPlus
+---
+
+# Cliproxyapiplus Instinct Test Configurable Feature
+
+## Action
+
+Update or add test files to cover the new config behavior
+
+## Evidence
+
+- Workflow: configurable-feature-addition
+- Pattern: config option changes always have related tests
+
+---
+id: cliproxyapiplus-instinct-test-translator-adapter
+trigger: "When fixing or enhancing translation logic for an external model adapter"
+confidence: 0.92
+domain: testing
+source: repo-analysis
+source_repo: wwj-git-rgb/CLIProxyAPIPlus
+---
+
+# Cliproxyapiplus Instinct Test Translator Adapter
+
+## Action
+
+Update or add the corresponding test file in the same translator subdirectory
+
+## Evidence
+
+- Workflow: translator-adapter-bugfix
+- Pattern: implementation and test file pairs in translator directories
+
+---
+id: cliproxyapiplus-instinct-commit-prefix
+trigger: "When writing a commit message"
+confidence: 0.9
+domain: git
+source: repo-analysis
+source_repo: wwj-git-rgb/CLIProxyAPIPlus
+---
+
+# Cliproxyapiplus Instinct Commit Prefix
+
+## Action
+
+Prefix the commit message with fix, feat, or feature as appropriate
+
+## Evidence
+
+- Pattern in commit prefixes: fix, feat, feature
+- Examples: 'fix(translator): ...', 'feat(codex): ...', 'feature(codex): ...'
+
+---
+id: cliproxyapiplus-instinct-commit-length
+trigger: "When writing a commit message"
+confidence: 0.8
+domain: git
+source: repo-analysis
+source_repo: wwj-git-rgb/CLIProxyAPIPlus
+---
+
+# Cliproxyapiplus Instinct Commit Length
+
+## Action
+
+Keep the commit message concise (average length ~83 characters)
+
+## Evidence
+
+- Pattern in commit averageLength: 83
+
+---
+id: cliproxyapiplus-instinct-feature-or-bugfix-workflow
+trigger: "When adding a new feature or fixing a bug in a Go module"
+confidence: 0.95
+domain: workflow
+source: repo-analysis
+source_repo: wwj-git-rgb/CLIProxyAPIPlus
+---
+
+# Cliproxyapiplus Instinct Feature Or Bugfix Workflow
+
+## Action
+
+Modify or add implementation file(s) (*.go) and corresponding test file(s) (*.go with _test.go suffix) in the same directory
+
+## Evidence
+
+- Workflow: feature-or-bugfix-with-implementation-and-tests
+- Files: *.go and *_test.go in same directory
+
+---
+id: cliproxyapiplus-instinct-configurable-feature-workflow
+trigger: "When introducing a new configuration option or feature"
+confidence: 0.9
+domain: workflow
+source: repo-analysis
+source_repo: wwj-git-rgb/CLIProxyAPIPlus
+---
+
+# Cliproxyapiplus Instinct Configurable Feature Workflow
+
+## Action
+
+Update Go implementation, related tests, and config.example.yaml to document the new option
+
+## Evidence
+
+- Workflow: configurable-feature-addition
+- Files: config.example.yaml, implementation, and test files
+
+---
+id: cliproxyapiplus-instinct-translator-adapter-bugfix-workflow
+trigger: "When fixing or improving translation logic for external model adapters"
+confidence: 0.92
+domain: workflow
+source: repo-analysis
+source_repo: wwj-git-rgb/CLIProxyAPIPlus
+---
+
+# Cliproxyapiplus Instinct Translator Adapter Bugfix Workflow
+
+## Action
+
+Modify or add implementation file(s) and corresponding test file(s) in the relevant translator adapter directory
+
+## Evidence
+
+- Workflow: translator-adapter-bugfix
+- Files: implementation and test file pairs in translator directories
+
